@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 // const messageSchema = require(‘./Message’);
-const Pet = require('/Pet');
+const Pet = require('./Pet');
 const userSchema = new Schema(
   {
     // TODO: location
