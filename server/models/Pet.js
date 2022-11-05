@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
-
+const traitSchema = require('./Trait');
+const breedSchema = require('./Breed');
 
 
 const petSchema = new Schema(
@@ -20,7 +21,11 @@ const petSchema = new Schema(
     // TODO: Trait
     // TODO: Owner (user)
 
+    // associating traits from the available array to the pet
+    traits: [traitSchema],
 
+    // associating a breed from the available array to the pet
+    breed: [breedSchema],
   },
 );
 
