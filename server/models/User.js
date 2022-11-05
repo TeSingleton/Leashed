@@ -28,12 +28,12 @@ const userSchema = new Schema(
     // saving messages to a specific user
     // messages: [messageSchema],
     // saving pet(s) to a specific user
-    pets: [
+    pet: 
       {
         type: Schema.Types.ObjectId,
         ref: "Pet"
       }
-    ],
+    
   },
   // set to use virtual below
   {
