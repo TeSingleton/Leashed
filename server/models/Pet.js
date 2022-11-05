@@ -12,13 +12,18 @@ const petSchema = new Schema(
       type: String,
       required: true,
     },
-    petId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
+    breed: {
+      type: String,
+      required: false
     },
-    // TODO: Breed
-    // TODO: Trait
-    // TODO: Owner (user)
+    trait: {
+      type: String,
+      required: false
+    },
+    owner: {
+      type: String,
+      required: true
+    }
 
   },
 );
