@@ -17,6 +17,9 @@ const petSchema = new Schema(
       type: Schema.Types.ObjectId,
       default: () => new Types.ObjectId(),
     },
+    // TODO: Breed
+    // TODO: Trait
+    // TODO: Owner (user)
 
     // associating traits from the available array to the pet
     traits: [traitSchema],

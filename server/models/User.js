@@ -1,11 +1,13 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const messageSchema = require('./Message');
-const petSchema = require('./Pet');
+// const messageSchema = require(‘./Message’);
+const Pet = require('./Pet');
 
 const userSchema = new Schema(
   {
+    // TODO: location
+    // TODO: message(?)
     username: {
       type: String,
       required: true,
@@ -31,8 +33,10 @@ const userSchema = new Schema(
     pets: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Pet',
-      },
+
+        ref: 'Pet'
+      }
+
     ],
   },
   // set to use virtual below
@@ -57,11 +61,10 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-// when we query a user, we'll also get another field called `messageCount` with the number of saved messages that user has (SEE ACTIVITY 21 - O2 - DEVELOP - MODELS)
+// when we query a user, we’ll also get another field called `messageCount` with the number of saved messages that user has (SEE ACTIVITY 21 - O2 - DEVELOP - MODELS)
 userSchema.virtual('messageCount').get(function () {
   return this.savedMessages.length;
 });
-
 const User = model('User', userSchema);
 
 module.exports = User;
