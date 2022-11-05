@@ -1,9 +1,11 @@
 const { Schema, model } = require('mongoose');
-const bcrypt = require(‘bcrypt’);
+const bcrypt = require('bcrypt');
 // const messageSchema = require(‘./Message’);
-const Pet = require(‘./Pet’);
+const Pet = require('/Pet');
 const userSchema = new Schema(
   {
+    // TODO: location
+    // TODO: message(?)
     username: {
       type: String,
       required: true,
@@ -13,7 +15,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: [/.+@.+\..+/, ‘Must use a valid email address’],
+      match: [/.+@.+\..+/, 'Must use a valid email address'],
     },
     password: {
       type: String,
@@ -29,7 +31,7 @@ const userSchema = new Schema(
     pets: [
       {
         type: Schema.Types.ObjectId,
-        ref: “Pet”
+        ref: 'Pet'
       }
     ],
   },
@@ -40,8 +42,8 @@ const userSchema = new Schema(
     },
 });
 // hash user password
-userSchema.pre(‘save’, async function (next) {
-  if (this.isNew || this.isModified(‘password’)) {
+userSchema.pre('save', async function (next) {
+  if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
@@ -52,10 +54,10 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 // when we query a user, we’ll also get another field called `messageCount` with the number of saved messages that user has (SEE ACTIVITY 21 - O2 - DEVELOP - MODELS)
-userSchema.virtual(‘messageCount’).get(function () {
+userSchema.virtual('messageCount').get(function () {
   return this.savedMessages.length;
 });
-const User = model(‘User’, userSchema);
+const User = model('User', userSchema);
 module.exports = User;
 
 
