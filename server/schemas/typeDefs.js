@@ -6,6 +6,16 @@ const typeDefs = gql`
     username: String
     email: String
     timeline: [Timeline]
+    pet: Pet
+  }
+  
+  type Pet {
+    _id: ID
+    name: String
+    bio: String
+    breed: String
+    trait: String
+    owner: String
   }
 
   type Timeline {
