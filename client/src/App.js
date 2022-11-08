@@ -15,6 +15,13 @@ import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+// todo add axios import here (axios dependancy has been installed)
+
+
+
+// todo construct axios fetch function here
+
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
