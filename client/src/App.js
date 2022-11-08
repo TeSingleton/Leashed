@@ -20,7 +20,19 @@ import Footer from './components/Footer';
 
 
 // todo construct axios fetch function here
+/*useEffect(()=>{
+  axios.get(*insert url here*)
+  .then(response)=>console.log(response.data)
+},[]);
 
+return(
+  <div>
+     *fetched data*
+     <div>
+);
+
+*/
+//todo above boiler plate may need to be moved into the app function.
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
