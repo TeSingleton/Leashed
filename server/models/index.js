@@ -1,4 +1,4 @@
 const User = require('./User');
-const Pet = require('./Pet');
+const Timeline = require('./Timeline');
 
-module.exports = { User, Pet };
+module.exports = { User, Timeline };

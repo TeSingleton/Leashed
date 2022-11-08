@@ -1,24 +1,22 @@
 {
-  "name": "leashed",
+  "name": "programming-thoughts",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
-  
-  "scripts": {
-    "start": "node server.js",
-    "seed": "node seeds/seed.js",
-    "watch": "nodemon server.js"
+  "engines": {
+    "node": "16.x"
   },
+  "scripts": {
+    "start": "node server --ignore client",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "apollo-server-express": "^3.6.2",
-    "express": "^4.17.2",
-    "graphql": "^16.3.0",
-    "mongoose": "^6.1.8"
-  },
   "devDependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.6"
+    "concurrently": "^5.1.0"
   }
 }
