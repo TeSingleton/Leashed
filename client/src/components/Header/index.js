@@ -77,10 +77,9 @@ export default function ButtonAppBar() {
               flexGrow: 1 ,
             }}
           >
-            Leashed
+            Leashed 🦮
           </Typography>
           
-
           {Auth.loggedIn() ? (
             <>
               <Button color="inherit" onClick={logout}>
