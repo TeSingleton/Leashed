@@ -10,7 +10,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PetsIcon from '@mui/icons-material/Pets';
 import Auth from '../../utils/auth';
 
-export default function FixedBottomNavigation() {
+export default function Footer() {
   const [value, setValue] = React.useState(0);
   const ref = React.useRef(null);
 
