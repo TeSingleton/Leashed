@@ -19,10 +19,10 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  timeline: [
+  pets: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Timeline',
+      ref: 'Pet',
     },
   ],
 });

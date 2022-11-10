@@ -47,7 +47,7 @@ const resolvers = {
     addTimeline: async (parent, { entry }, { user }) => {
 
       if(!user) {
-        throw new AuthenticationError('Must be logged in to create timeline entries');
+        throw new AuthenticationError('Must be logged in to create pet entries');
       }
 
       const timeline = await Timeline.create({ ...entry });

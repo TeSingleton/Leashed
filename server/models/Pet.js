@@ -18,11 +18,14 @@ const petSchema = new Schema(
       type: String,
       required: false
     },
+    picture: {
+      type: String,
+      required: true
+    },
     owner: {
       type: String,
       required: true
     }
-
   },
 );
 

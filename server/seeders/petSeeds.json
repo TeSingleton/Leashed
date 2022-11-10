@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Pumpkin",
+    "bio": "Loves long walks on the beach",
+    "breed": "chihuahua",
+    "trait": "sassy",
+    "owner": "Brian Chuckles",
+    "picture": "./assets/picture/Pumpkin"
+  }
+]
