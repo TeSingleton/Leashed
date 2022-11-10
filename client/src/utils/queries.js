@@ -19,3 +19,15 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_PET = gql`
+  query pet {
+    pet {
+      name
+      bio
+      breed
+      trait
+      owner
+      }
+    }
+  `;
