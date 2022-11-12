@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import Paper from '@mui/material/Paper';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -28,8 +27,8 @@ export default function Footer() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction  icon={<AccountCircleIcon  fontSize="large"/>} href="/me"/>
-          <BottomNavigationAction  icon={<PetsIcon  fontSize="large"/>} href="/home"/>
+          <BottomNavigationAction  icon={<AccountCircleIcon  fontSize="large"/>} href="/profiles/:username"/>
+          <BottomNavigationAction  icon={<PetsIcon  fontSize="large"/>} href="/gallery"/>
           <BottomNavigationAction icon={<MailOutlineIcon fontSize="large"/>} href="/messages"/>
         </BottomNavigation>
         </>
