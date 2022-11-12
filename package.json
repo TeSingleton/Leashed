@@ -2,7 +2,7 @@
   "name": "leashed",
   "version": "1.0.0",
   "description": "",
-  "main": "server/server.js",
+  "main": "App.js",
   "engines": {
     "node": "16.x"
   },
