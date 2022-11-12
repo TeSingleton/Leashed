@@ -16,24 +16,28 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      pets{_id
-     name
-    bio
-    breed
-    trait
-    owner}
+      pets{
+            _id
+            name
+            bio
+            breed
+            trait
+            owner
+            picture}
     }
   }
 `;
 
 export const QUERY_PET = gql`
   query pet {
-    pet {
+    pets {
+      _id
       name
       bio
       breed
       trait
       owner
+      picture
       }
     }
   `;
