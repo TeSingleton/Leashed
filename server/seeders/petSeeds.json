@@ -6,5 +6,61 @@
     "trait": "sassy",
     "owner": "Brian Chuckles",
     "picture": "./assets/picture/Pumpkin"
+  },
+  {
+    "name": "Ghost",
+    "bio": "An albino direwolf who is new to Seattle",
+    "breed": "direwolf",
+    "trait": "protective at first",
+    "owner": "Jon Snow",
+    "picture": "./assets/picture/Ghost"
+  },
+  {
+    "name": "Bruiser",
+    "bio": "Star of Legally Blonde, and Legally Blonde 2",
+    "breed": "chihuahua",
+    "trait": "in charge",
+    "owner": "Elle Woods",
+    "picture": "./assets/picture/Bruiser"
+  },
+  {
+    "name": "Hershey",
+    "bio": "Stay hungry",
+    "breed": "lab",
+    "trait": "eats everything",
+    "owner": "Macy Bacy",
+    "picture": "./assets/picture/Hershey"
+  },
+  {
+    "name": "Bark Twain",
+    "bio": "Surprisingly fast and will out-fetch you!",
+    "breed": "corgi",
+    "trait": "loves new friends",
+    "owner": "Chester Fester",
+    "picture": "./assets/picture/Bark-Twain"
+  },
+  {
+    "name": "Puff",
+    "bio": "Small but mighty",
+    "breed": "pomeranian",
+    "trait": "sweet",
+    "owner": "Jennifer Hanniston",
+    "picture": "./assets/picture/Puff"
+  },
+  {
+    "name": "Larry",
+    "bio": "Will steal your human",
+    "breed": "chinese crested",
+    "trait": "loves new friends",
+    "owner": "Brad Pott",
+    "picture": "./assets/picture/Larry"
+  },
+  {
+    "name": "Sithy",
+    "bio": "Loves belly scratches in the park",
+    "breed": "pug",
+    "trait": "loves new friends",
+    "owner": "Darth Vader",
+    "picture": "./assets/picture/Sithy"
   }
 ]
