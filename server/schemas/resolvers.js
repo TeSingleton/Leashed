@@ -17,7 +17,7 @@ const resolvers = {
 
       return await User.findOne({ _id: context.user._id })
               .select("-password")
-              .populate('pets')
+              .populate('Pet')
     },
   },
 

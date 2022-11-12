@@ -1,9 +1,10 @@
 [
   {
+    "_id": "637012a61420093b84808947",
     "username": "Brian Chuckles",
     "email": "bkernighan@iheartdogs.dev",
     "password": "password",
-    "pets": "636c85b59511865931fd3052"
+    "pets": ["636c85b59511865931fd3052"]
   },
   {
     "username": "Macy Bacy",
