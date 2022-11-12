@@ -8,12 +8,33 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import './App.css';
+
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+// todo add axios import here (axios dependancy has been installed)
+
+
+
+// todo construct axios fetch function here
+/*useEffect(()=>{
+  axios.get(*insert url here*)
+  .then(response)=>console.log(response.data)
+},[]);
+
+return(
+  <div>
+     *fetched data*
+     <div>
+);
+
+*/
+//todo above boiler plate may need to be moved into the app function.
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -43,7 +64,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div className="App">
           <Header />
           <div className="container">
             <Routes>
@@ -60,6 +81,10 @@ function App() {
                 element={<Signup />}
               />
               <Route 
+                path="/Gallery"
+                element={<Login />}
+              />
+              <Route 
                 path="/me"
                 element={<Profile />}
               />
@@ -71,6 +96,7 @@ function App() {
           </div>
           <Footer />
         </div>
+        
       </Router>
     </ApolloProvider>
   );
