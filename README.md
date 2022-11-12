@@ -79,7 +79,7 @@ SO THAT I may connect those pets with my pet
 
 
 ### Creators
-[Ali](https://github.com/nugemeister), [Colin](https://github.com/cplancich), [Connor](https://github.com/cmullan602), [James](https://github.com/), and [Té](https://github.com/TeSingleton)
+[Ali](https://github.com/nugemeister), [Colin](https://github.com/cplancich), [Connor](https://github.com/cmullan602), [James](https://github.com/James-Lisenby), and [Té](https://github.com/TeSingleton)
 <br>
 
 <br>
