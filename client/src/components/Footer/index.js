@@ -27,7 +27,7 @@ export default function Footer() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction  icon={<AccountCircleIcon  fontSize="large"/>} href="/profiles/:username"/>
+          <BottomNavigationAction  icon={<AccountCircleIcon  fontSize="large"/>} href="/me"/>
           <BottomNavigationAction  icon={<PetsIcon  fontSize="large"/>} href="/gallery"/>
           <BottomNavigationAction icon={<MailOutlineIcon fontSize="large"/>} href="/messages"/>
         </BottomNavigation>
