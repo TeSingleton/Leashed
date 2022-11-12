@@ -7,30 +7,35 @@
     "pets": ["636c85b59511865931fd3052"]
   },
   {
+    "_id": "636f34827f56ce5668ed362b",
     "username": "Macy Bacy",
     "email": "dogluvr@aol.com",
     "password": "password",
     "pets": ["636f33b0a0df4ee6edd83f11"]
   },
   {
+    "_id": "636f34827f56ce5668ed362c",
     "username": "Chester Fester",
     "email": "ineedhelp@aol.com",
     "password": "password",
     "pets": ["636f33b0a0df4ee6edd83f12"]
   },
   {
+    "_id": "636f34827f56ce5668ed362d",
     "username": "Jennifer Hanniston",
     "email": "jenny@hotmail.com",
     "password": "password",
     "pets": ["636f33b0a0df4ee6edd83f13"]
   },
   {
+    "_id": "636f34827f56ce5668ed362e",
     "username": "Brad Pott",
     "email": "brad@gmail.com",
     "password": "password",
     "pets": ["636f33b0a0df4ee6edd83f14"]
   },
   {
+    "_id": "636f34827f56ce5668ed362f",
     "username": "Elle Woods",
     "email": "harvardlawgal@hotmail.com",
     "password": "password",
@@ -38,12 +43,14 @@
 
   },
   {
+    "_id": "636f34827f56ce5668ed3630",
     "username": "Darth Vader",
     "email": "darth@hotmail.com",
     "password": "password",
     "pets": ["636f33b0a0df4ee6edd83f15"]
   },
   {
+    "_id": "636f34827f56ce5668ed3631",
     "username": "Jon Snow",
     "email": "kingofthenorth@gmail.com",
     "password": "password",
