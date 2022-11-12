@@ -35,7 +35,7 @@ const Profile = () => {
       </h4>
     );
   }
-
+console.log(user)
   return (
     <div>
       <div className="flex-row justify-center mb-3">

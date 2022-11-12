@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    pets: [Pet]
+    pets: Pet
   }
   
   type Pet {
@@ -14,6 +14,7 @@ const typeDefs = gql`
     bio: String
     breed: String
     trait: String
+    picture: String
     owner: String
   }
 
