@@ -9,6 +9,7 @@
     "picture": "./assets/picture/Pumpkin"
   },
   {
+    "_id": "636f33b0a0df4ee6edd83f0f",
     "name": "Ghost",
     "bio": "An albino direwolf who is new to Seattle",
     "breed": "direwolf",
@@ -17,6 +18,7 @@
     "picture": "./assets/picture/Ghost"
   },
   {
+    "_id": "636f33b0a0df4ee6edd83f10",
     "name": "Bruiser",
     "bio": "Star of Legally Blonde, and Legally Blonde 2",
     "breed": "chihuahua",
@@ -25,6 +27,7 @@
     "picture": "./assets/picture/Bruiser"
   },
   {
+    "_id": "636f33b0a0df4ee6edd83f11",
     "name": "Hershey",
     "bio": "Stay hungry",
     "breed": "lab",
@@ -33,6 +36,7 @@
     "picture": "./assets/picture/Hershey"
   },
   {
+    "_id": "636f33b0a0df4ee6edd83f12",
     "name": "Bark Twain",
     "bio": "Surprisingly fast and will out-fetch you!",
     "breed": "corgi",
@@ -41,6 +45,7 @@
     "picture": "./assets/picture/Bark-Twain"
   },
   {
+    "_id": "636f33b0a0df4ee6edd83f13",
     "name": "Puff",
     "bio": "Small but mighty",
     "breed": "pomeranian",
@@ -49,6 +54,7 @@
     "picture": "./assets/picture/Puff"
   },
   {
+    "_id": "636f33b0a0df4ee6edd83f14",
     "name": "Larry",
     "bio": "Will steal your human",
     "breed": "chinese crested",
@@ -57,6 +63,7 @@
     "picture": "./assets/picture/Larry"
   },
   {
+    "_id": "636f33b0a0df4ee6edd83f15",
     "name": "Sithy",
     "bio": "Loves belly scratches in the park",
     "breed": "pug",
