@@ -15,9 +15,9 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!');
       }
 
-      return User.findOne({ _id: context.user._id })
+      return await User.findOne({ _id: context.user._id })
               .select("-password")
-              .populate('timeline');
+              .populate('pets')
     },
   },
 

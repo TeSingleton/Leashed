@@ -16,6 +16,9 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Gallery from './pages/Gallery';
+import Pet from './pages/Pet'
+
 
 // todo add axios import here (axios dependancy has been installed)
 
@@ -82,7 +85,7 @@ function App() {
               />
               <Route 
                 path="/Gallery"
-                element={<Login />}
+                element={<Gallery />}
               />
               <Route 
                 path="/me"
@@ -90,7 +93,7 @@ function App() {
               />
               <Route 
                 path="/profiles/:username"
-                element={<Profile />}
+                element={<Pet />}
               />
             </Routes>
           </div>
