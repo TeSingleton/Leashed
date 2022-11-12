@@ -8,11 +8,44 @@
   {
     "username": "Macy Bacy",
     "email": "dogluvr@aol.com",
-    "password": "password"
+    "password": "password",
+    "pets": ["636f33b0a0df4ee6edd83f11"]
   },
   {
     "username": "Chester Fester",
     "email": "ineedhelp@aol.com",
-    "password": "password"
+    "password": "password",
+    "pets": ["636f33b0a0df4ee6edd83f12"]
+  },
+  {
+    "username": "Jennifer Hanniston",
+    "email": "jenny@hotmail.com",
+    "password": "password",
+    "pets": ["636f33b0a0df4ee6edd83f13"]
+  },
+  {
+    "username": "Brad Pott",
+    "email": "brad@gmail.com",
+    "password": "password",
+    "pets": ["636f33b0a0df4ee6edd83f14"]
+  },
+  {
+    "username": "Elle Woods",
+    "email": "harvardlawgal@hotmail.com",
+    "password": "password",
+    "pets": ["636f33b0a0df4ee6edd83f10"]
+
+  },
+  {
+    "username": "Darth Vader",
+    "email": "darth@hotmail.com",
+    "password": "password",
+    "pets": ["636f33b0a0df4ee6edd83f15"]
+  },
+  {
+    "username": "Jon Snow",
+    "email": "kingofthenorth@gmail.com",
+    "password": "password",
+    "pets": ["636f33b0a0df4ee6edd83f0f"]
   }
 ]
