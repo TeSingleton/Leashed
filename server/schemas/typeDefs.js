@@ -47,7 +47,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!, pet: String!, breed: String!, traits: String!, bio: String!): Auth
+    addUser(username: String!, email: String!, password: String!, pet: String!, breed: String!, trait: String!, bio: String!): Auth
     login(email: String!, password: String!): Auth
     addTimeline(entry: TimelineInput): Timeline
   }

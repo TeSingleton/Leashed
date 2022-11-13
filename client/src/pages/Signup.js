@@ -16,7 +16,7 @@ const Signup = () => {
     password: '',
     pet: '', 
     breed: '',
-    traits: '',
+    trait: '',
     bio: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
@@ -101,8 +101,8 @@ const Signup = () => {
                 <input 
                   className="form-input"
                   placeholder="Personality traits"
-                  name="traits"
-                  type="traits"
+                  name="trait"
+                  type="trait"
                   value={formState.traits}
                   onChange={handleChange}
                 />
