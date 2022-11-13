@@ -16,8 +16,8 @@ const resolvers = {
       }
 
       return await User.findOne({ _id: context.user._id })
+              .populate('pets')
               .select("-password")
-              .populate('Pet')
     },
     // pet: async (parent, args, context) => {
     //   if (!context.user) {
