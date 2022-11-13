@@ -1,42 +1,20 @@
 import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import { QUERY_USER } from '../utils/queries';
-
-import Auth from '../utils/auth';
+import { QUERY_ME } from '../utils/queries';
 
 const Profile = () => {
 
   // Execute the query on component load
-  const { loading, data } = useQuery(QUERY_USER);
+  const { loading, data } = useQuery(QUERY_ME);
 
   // Use optional chaining to check if data exists and if it has a pets property. If not, return an empty array to use.
-  const user = data?.username || [];
-
-
-
-
-  // const { username: userParam } = useParams();
-
-  // const { loading, data } = useQuery(QUERY_USER), {
-  //   variables: { username: userParam },
-  // });
-
-
-
-  // const user = data?.user || {};
-
-  
-  // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === useQuery()) {
-    return <Navigate to="/me" />;
-  }
+  const user = data?.me || [];
 
   if (loading) {
     return <div>Loading...</div>;
   }
-  console.log(user)
+
   if (!user?.username) {
     return (
       <h4>
@@ -45,7 +23,9 @@ const Profile = () => {
       </h4>
     );
   }
-console.log(user)
+
+  console.log(user);
+
   return (
     <div>
       <div className="flex-row justify-center mb-3">
@@ -56,14 +36,6 @@ console.log(user)
         <div className="col-12 col-md-10 mb-5">
           {user.username}
         </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
-          >
-            Something else here
-          </div>
-        )}
       </div>
     </div>
   );
