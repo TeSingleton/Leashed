@@ -14,11 +14,10 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 // import { QUERY_THOUGHTS } from '../utils/queries';
 
 const Gallery = () => {
-  const { loading, data } = useQuery(QUERY_PET, {
-    fetchPolicy: "no-cache"
-  });
+  const { loading, data } = useQuery(QUERY_PET);
 
   const petList = data?.pets || [];
+  console.log(petList)
 
   return (
     <main>
@@ -34,14 +33,14 @@ const Gallery = () => {
                 <Grid2 container spacing={2} id="portfolio">
 
                 {petList.map(({ id, name, bio, picture }) => (
-                  <Grid2 key={id} xs="auto">
-                    <Card sx={{ maxWidth: 345 }}>
+                  <Grid2  xs="auto">
+                    <Card key={id} sx={{ maxWidth: 345 }}>
                       <CardActionArea href='/profile/:profile{id}'>
                         <CardMedia
                           component="img"
                           height="140"
                           image={picture}
-                          alt="bloggingtech"
+                          alt="picutre of dog"
                         />
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
