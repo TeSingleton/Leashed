@@ -2,24 +2,34 @@ import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_USER } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
 const Profile = () => {
-  const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam },
-  });
+  // Execute the query on component load
+  const { loading, data } = useQuery(QUERY_USER);
+
+  // Use optional chaining to check if data exists and if it has a pets property. If not, return an empty array to use.
+  const user = data?.username || [];
 
 
 
-  const user = data?.me || data?.user || {};
+
+  // const { username: userParam } = useParams();
+
+  // const { loading, data } = useQuery(QUERY_USER), {
+  //   variables: { username: userParam },
+  // });
+
+
+
+  // const user = data?.user || {};
 
   
   // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+  if (Auth.loggedIn() && Auth.getProfile().data.username === useQuery()) {
     return <Navigate to="/me" />;
   }
 
