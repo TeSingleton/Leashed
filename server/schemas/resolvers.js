@@ -19,6 +19,13 @@ const resolvers = {
               .select("-password")
               .populate('Pet')
     },
+    // pet: async (parent, args, context) => {
+    //   if (!context.user) {
+    //     throw new AuthenticationError('You need to be logged in!');
+    //   }
+
+    //   return await Pet.findAll()
+    // }
   },
 
   Mutation: {
