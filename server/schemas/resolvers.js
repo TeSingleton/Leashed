@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Timeline } = require('../models');
+const { User, Timeline, Pet} = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -19,13 +19,9 @@ const resolvers = {
               .populate('pets')
               .select("-password")
     },
-    // pet: async (parent, args, context) => {
-    //   if (!context.user) {
-    //     throw new AuthenticationError('You need to be logged in!');
-    //   }
-
-    //   return await Pet.findAll()
-    // }
+    pets: async () => {
+      return await Pet.find();
+    }
   },
 
   Mutation: {
