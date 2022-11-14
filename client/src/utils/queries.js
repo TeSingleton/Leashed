@@ -28,8 +28,8 @@ export const QUERY_ME = gql`
   }
 `;
 
-export const QUERY_PET = gql`
-  query pet {
+export const QUERY_PETS = gql`
+  query pets {
     pets {
       _id
       name
@@ -41,3 +41,17 @@ export const QUERY_PET = gql`
       }
     }
   `;
+
+export const QUERY_PET = gql`
+query getPet($petId: ID!) {
+  pet(petId: $petId) {
+    _id
+    bio
+    breed
+    name
+    owner
+    picture
+    trait
+  }
+}
+`;

@@ -1,62 +1,49 @@
-import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+
 import { useQuery } from '@apollo/client';
+import { QUERY_PET } from '../utils/queries';
+import { useParams } from 'react-router-dom';
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
-import Auth from '../utils/auth';
+// import { QUERY_THOUGHTS } from '../utils/queries';
 
 const Pet = () => {
-  const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam },
+  const { petId } = useParams();
+
+  const { loading, data } = useQuery(QUERY_PET, {
+    variables: { petId: petId },
   });
 
-
-
-  const user = data?.me || data?.user || {};
-
-  
-  // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Navigate to="/me" />;
-  }
+  const pet = data?.pet || {};
+  console.log(pet)
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
-  console.log(user)
-  if (!user?.username) {
-    return (
-      <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
-    );
-  }
-console.log(user)
   return (
-    <div>
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {user.username}' profile.
-        </h2>
+    <React.Fragment>
+    <CssBaseline />
+    <Container class="petContainer" maxWidth="sm">
+    
+      <h1>{pet.name}</h1>
+          <img class="petImage"
+            src={pet.picture}
+            alt={pet.name}
+          />
+          <p>{pet.breed}</p>
+          <p>{pet.trait}</p>
+          <p>{pet.bio}</p>
+          <p>{pet.owner}</p>
 
-        <div className="col-12 col-md-10 mb-5">
-          {user.username}
-        </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
-          >
-            Something else here
-          </div>
-        )}
-      </div>
-    </div>
+    
+    </Container>
+  </React.Fragment>
   );
+
 };
 
 export default Pet;
