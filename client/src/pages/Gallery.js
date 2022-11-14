@@ -21,12 +21,10 @@ const Gallery = () => {
 
   return (
     <main>
-      <div className="card bg-white card-rounded w-50">
-        <div className="card-header bg-dark text-center">
-          <h1>Welcome to Leashed!</h1>
-        </div>
-        <div className="card-body m-5">
-          <h2>Our latest furry members:</h2>
+      <div id="text">
+        <h1>Check out our latest members below:</h1>
+      </div>
+       
               {loading ? (
                 <div>Loading...</div>
               ) : (
@@ -63,14 +61,10 @@ const Gallery = () => {
               </Grid2>
            
               )}
-            </div>
-            <div className="card-footer text-center m-3">
               <h2>Ready to create a new matchup?</h2>
               {/* <Link to="/matchup">
                 <button className="btn btn-lg btn-danger">Create Matchup!</button>
               </Link> */}
-        </div>
-      </div>
     </main>
   );
 };

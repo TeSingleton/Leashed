@@ -8,15 +8,25 @@ body{
     max-width: 350px;
     max-height: p;
     border-radius: 30px;
+    padding: 10px;
 }
 
-.petImage {
+#img2 {
     max-width: 350px;
     max-height: p;
     border-radius: 30px;
+    padding-bottom: 10px;
 }
 
-.petContainer {
+#petContainer {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+#petContainer2 {
     display: flex; 
     justify-content: center;
     flex-direction: column;
@@ -29,3 +39,24 @@ body{
     margin-bottom: 30px;
   
   }
+
+  #homeDiv {
+      justify-content: center;
+      text-align: center;
+  }
+
+
+#petImage {
+    max-width: 350px;
+    max-height: p;
+    border-radius: 30px;
+    padding-bottom: 10px;
+}
+
+#text {
+    text-align: center;
+}
+
+#profileWords{
+    text-align: center;
+}
