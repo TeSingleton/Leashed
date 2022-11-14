@@ -9,3 +9,23 @@ body{
     max-height: p;
     border-radius: 30px;
 }
+
+.petImage {
+    max-width: 350px;
+    max-height: p;
+    border-radius: 30px;
+}
+
+.petContainer {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+#portfolio{
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  
+  }

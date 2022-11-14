@@ -33,6 +33,11 @@ const resolvers = {
 
     //   return await Pet.findOne({ name: args.name })
     // }
+    },
+
+    pet: async (parent, { petId }) => {
+      return Pet.findOne({ _id: petId });
+    },
   },
 
   Mutation: {
@@ -78,7 +83,6 @@ const resolvers = {
     //   }
     // }
     },
-  },
 };
 
 module.exports = resolvers;

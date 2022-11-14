@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { QUERY_PET } from '../utils/queries';
+import { QUERY_PETS } from '../utils/queries';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -14,7 +14,7 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 // import { QUERY_THOUGHTS } from '../utils/queries';
 
 const Gallery = () => {
-  const { loading, data } = useQuery(QUERY_PET);
+  const { loading, data } = useQuery(QUERY_PETS);
 
   const petList = data?.pets || [];
   console.log(petList)
@@ -32,10 +32,10 @@ const Gallery = () => {
               ) : (
                 <Grid2 container spacing={2} id="portfolio">
 
-                {petList.map(({ id, name, bio, picture }) => (
+                {petList.map(({ _id, name, bio, picture }, index) => (
                   <Grid2  xs="auto">
-                    <Card key={id} sx={{ maxWidth: 345 }}>
-                      <CardActionArea href='/profile/:profile{id}'>
+                    <Card key={index} sx={{ maxWidth: 345 }}>
+                      <CardActionArea href={`/pets/${_id}`}>
                         <CardMedia
                           component="img"
                           height="140"
