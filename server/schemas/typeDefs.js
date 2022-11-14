@@ -44,7 +44,8 @@ const typeDefs = gql`
     # users: [User]
     user(username: String!): User
     me: User
-    pets: [Pet]!
+    pets: [Pet]
+    pet(petId: ID!): Pet
   }
 
   type Mutation {

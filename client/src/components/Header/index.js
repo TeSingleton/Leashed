@@ -21,7 +21,7 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1, color: 'green'}}>
       <AppBar  position="static">
         <Toolbar>
-        <AdbIcon sx={{ display: { }, mr: 2 }}  />
+        
           <Typography
             variant="h6"
             component="a"

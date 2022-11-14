@@ -21,7 +21,11 @@ const resolvers = {
     },
     pets: async () => {
       return await Pet.find();
-    }
+    },
+
+    pet: async (parent, { petId }) => {
+      return Pet.findOne({ _id: petId });
+    },
   },
 
   Mutation: {
@@ -59,7 +63,7 @@ const resolvers = {
 
       return timeline;
 
-    }
+    },
   },
 };
 

@@ -92,7 +92,7 @@ function App() {
                 element={<Profile />}
               />
               <Route 
-                path="/profiles/:username"
+                path="/pets/:petId"
                 element={<Pet />}
               />
             </Routes>
