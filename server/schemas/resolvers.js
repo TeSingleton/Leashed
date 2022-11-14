@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Timeline, Pet} = require('../models');
+
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -8,7 +9,10 @@ const resolvers = {
     //   return User.find().select("-password");
     // },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).select("-password");
+      if (!context.user) {
+        throw new AuthenticationError('You need to be logged in!');
+      }
+      return User.findOne({ username }).populate("pets").select("-password");
     },
     me: async (parent, args, context) => {
       if (!context.user) {
@@ -21,7 +25,14 @@ const resolvers = {
     },
     pets: async () => {
       return await Pet.find();
-    }
+    // pet: async (parent, args, context) => {
+    //   if (!context.user) {
+    //     // throw new AuthenticationError('You need to be logged in!');
+    //   }
+    //   console.log("here");
+
+    //   return await Pet.findOne({ name: args.name })
+    // }
   },
 
   Mutation: {
@@ -59,7 +70,14 @@ const resolvers = {
 
       return timeline;
 
-    }
+    },
+
+    // addPet: async (parent, { name, bio, breed, trait, picture }) => {
+    //   if(!user) {
+
+    //   }
+    // }
+    },
   },
 };
 

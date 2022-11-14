@@ -32,10 +32,6 @@ const Profile = () => {
         <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
           Viewing {user.username}' profile.
         </h2>
-
-        <div className="col-12 col-md-10 mb-5">
-          {user.username}
-        </div>
       </div>
     </div>
   );
