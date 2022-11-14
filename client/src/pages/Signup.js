@@ -81,8 +81,6 @@ const UserSignup = () => {
                 >
                   Submit User
                 </button>
-
-
               </form>
             )}
             {error && (

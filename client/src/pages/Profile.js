@@ -2,6 +2,8 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import Container from '@mui/material/Container';
 
+import { Button } from "@mui/material";
+
 import { QUERY_ME } from '../utils/queries';
 
 const Profile = () => {
@@ -62,6 +64,11 @@ const Profile = () => {
         </Container>
               </div>
             ))}
+
+
+        <Button href={'/petsignup'}>
+	        Add Pet
+        </Button>
     </div>
   );
 };
