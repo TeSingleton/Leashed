@@ -41,7 +41,6 @@ const typeDefs = gql`
   }
 
   type Query {
-    # users: [User]
     user(username: String!): User
     me: User
     pets: [Pet]
@@ -50,6 +49,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
+    addPet(username: String!, email: String!, password: String!, name: String!, breed: String!, traits: String!, bio: String!, picture: String!): Pet
     login(email: String!, password: String!): Auth
     addTimeline(entry: TimelineInput): Timeline
   }

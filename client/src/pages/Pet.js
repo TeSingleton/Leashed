@@ -4,10 +4,8 @@ import { QUERY_PET } from '../utils/queries';
 import { useParams } from 'react-router-dom';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
+// import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-
-
-// import { QUERY_THOUGHTS } from '../utils/queries';
 
 const Pet = () => {
 

@@ -1,5 +1,6 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Timeline, Pet} = require('../models');
+const { User, Pet} = require('../models');
+
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -8,7 +9,10 @@ const resolvers = {
     //   return User.find().select("-password");
     // },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).select("-password");
+      if (!context.user) {
+        throw new AuthenticationError('You need to be logged in!');
+      }
+      return User.findOne({ username }).populate("pets").select("-password");
     },
     me: async (parent, args, context) => {
       if (!context.user) {
@@ -21,6 +25,14 @@ const resolvers = {
     },
     pets: async () => {
       return await Pet.find();
+    // pet: async (parent, args, context) => {
+    //   if (!context.user) {
+    //     // throw new AuthenticationError('You need to be logged in!');
+    //   }
+    //   console.log("here");
+
+    //   return await Pet.findOne({ name: args.name })
+    // }
     },
 
     pet: async (parent, { petId }) => {
@@ -51,18 +63,16 @@ const resolvers = {
 
       return { token, user };
     },
-    addTimeline: async (parent, { entry }, { user }) => {
+    addPet: async (parent, { name, bio, breed, trait, picture, owner }) => {
+      // if(!user) {
+      //   throw new AuthenticationError('Must be logged in to create pet entries');
+      // }
 
-      if(!user) {
-        throw new AuthenticationError('Must be logged in to create pet entries');
-      }
+      const pet = await Pet.create({ ...entry });
 
-      const timeline = await Timeline.create({ ...entry });
+      await User.findOneAndUpdate({ _id: user._id }, { $addToSet: { pets: pet._id } });
 
-      await User.findOneAndUpdate({ _id: user._id }, { $addToSet: { timeline: timeline._id } });
-
-      return timeline;
-
+      return pet;
     },
   },
 };
