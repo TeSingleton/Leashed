@@ -85,7 +85,7 @@ function App() {
                 element={<Signup />}
               />
               <Route 
-                path="/petSignup"
+                path="/petsignup"
                 element={<PetSignup />}
               />
               <Route 
