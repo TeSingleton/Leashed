@@ -18,6 +18,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
 import Pet from './pages/Pet'
+import PetSignup from './pages/PetSignup';
 
 
 // todo add axios import here (axios dependancy has been installed)
@@ -82,6 +83,10 @@ function App() {
               <Route 
                 path="/signup"
                 element={<Signup />}
+              />
+              <Route 
+                path="/petSignup"
+                element={<PetSignup />}
               />
               <Route 
                 path="/Gallery"

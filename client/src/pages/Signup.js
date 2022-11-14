@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import UploadWidget from '../components/UploadWidget';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-// TODO: create formState functions for Pet data (pet, breed, traits, pet bio, pet picture)
+// User Signup Form 
 
-const Signup = () => {
+const UserSignup = () => {
   const [formState, setFormState] = useState({
     username: '',
     email: '',
@@ -45,7 +44,7 @@ const Signup = () => {
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 className="card-header bg-dark text-light p-2">New User Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -60,72 +59,32 @@ const Signup = () => {
                   name="username"
                   type="text"
                   value={formState.name}
-                  onChange={handleChange}
-                />
+                  onChange={handleChange} />
                 <input
                   className="form-input"
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
-                  onChange={handleChange}
-                />
+                  onChange={handleChange} />
                 <input
                   className="form-input"
                   placeholder="Password"
                   name="password"
                   type="password"
                   value={formState.password}
-                  onChange={handleChange}
-                />
-                <input 
-                  className="form-input"
-                  placeholder="Your BFF's Name"
-                  name="pet"
-                  type="pet"
-                  value={formState.pet}
-                  onChange={handleChange}
-                />
-                <input 
-                  className="form-input"
-                  placeholder="Breed"
-                  name="breed"
-                  type="breed"
-                  value={formState.breed}
-                  onChange={handleChange}
-                />
-                <input 
-                  className="form-input"
-                  placeholder="Personality traits"
-                  name="traits"
-                  type="traits"
-                  value={formState.traits}
-                  onChange={handleChange}
-                />
-                <input 
-                  className="form-input"
-                  placeholder="Pet Bio"
-                  name="bio"
-                  type="bio"
-                  value={formState.bio}
-                  onChange={handleChange}
-                />
-                <div className="display-flex">
-                  {/* Used for uploading Pet Piccture */}
-                  {/* TODO: Deploy application to fix cloudinary bug (Does not run on local server, needs to be deployed) */}
-                  {/* TODO: Fetch data after upload to return cloudinary image link as a string to be attached to Pet */}
-                  <p>Pet Picture </p><UploadWidget />
-                </div>
+                  onChange={handleChange} />
                 <button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  Submit
+                  Submit User
                 </button>
+
+
               </form>
             )}
-
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
@@ -134,8 +93,11 @@ const Signup = () => {
           </div>
         </div>
       </div>
-    </main>
+      </main>
   );
 };
 
-export default Signup;
+console.log(UserSignup);
+
+export default UserSignup;
+

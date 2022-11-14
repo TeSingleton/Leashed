@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Timeline, Pet} = require('../models');
+const { User, Pet} = require('../models');
 
 const { signToken } = require('../utils/auth');
 
@@ -63,26 +63,18 @@ const resolvers = {
 
       return { token, user };
     },
-    addTimeline: async (parent, { entry }, { user }) => {
+    addPet: async (parent, { name, bio, breed, trait, picture, owner }) => {
+      // if(!user) {
+      //   throw new AuthenticationError('Must be logged in to create pet entries');
+      // }
 
-      if(!user) {
-        throw new AuthenticationError('Must be logged in to create pet entries');
-      }
+      const pet = await Pet.create({ ...entry });
 
-      const timeline = await Timeline.create({ ...entry });
+      await User.findOneAndUpdate({ _id: user._id }, { $addToSet: { pets: pet._id } });
 
-      await User.findOneAndUpdate({ _id: user._id }, { $addToSet: { timeline: timeline._id } });
-
-      return timeline;
-
+      return pet;
     },
-
-    // addPet: async (parent, { name, bio, breed, trait, picture }) => {
-    //   if(!user) {
-
-    //   }
-    // }
-    },
+  },
 };
 
 module.exports = resolvers;

@@ -20,7 +20,7 @@ const petSchema = new Schema(
     },
     picture: {
       type: String,
-      required: true
+      required: false
     },
     owner: {
       type: String,
