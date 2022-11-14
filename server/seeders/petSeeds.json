@@ -1,6 +1,4 @@
 
-
-
 [
   {
     "_id": "636c85b59511865931fd3052",
@@ -9,7 +7,7 @@
     "breed": "chihuahua",
     "trait": "sassy",
     "owner": "Brian Chuckles",
-    "picture": "../assets/picture/Pumpkin.jpg"
+    "picture": "../assets/pictures/Pumpkin.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f0f",
@@ -18,7 +16,7 @@
     "breed": "direwolf",
     "trait": "protective at first",
     "owner": "Jon Snow",
-    "picture": "../assets/picture/Ghost.jpg"
+    "picture": "../assets/pictures/Ghost.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f10",
@@ -27,7 +25,7 @@
     "breed": "chihuahua",
     "trait": "in charge",
     "owner": "Elle Woods",
-    "picture": "../assets/picture/Bruiser.jpg"
+    "picture": "../assets/pictures/Bruiser.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f11",
@@ -36,7 +34,7 @@
     "breed": "lab",
     "trait": "eats everything",
     "owner": "Macy Bacy",
-    "picture": "../assets/picture/Hershey.jpg"
+    "picture": "../assets/pictures/Hershey.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f12",
@@ -45,7 +43,7 @@
     "breed": "corgi",
     "trait": "loves new friends",
     "owner": "Chester Fester",
-    "picture": "../assets/picture/Bark-Twain.jpg"
+    "picture": "../assets/picutres/Bark-Twain.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f13",
@@ -54,7 +52,7 @@
     "breed": "pomeranian",
     "trait": "sweet",
     "owner": "Jennifer Hanniston",
-    "picture": "../assets/picture/Puff.jpg"
+    "picture": "./assets/pictures/Puff.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f14",
@@ -63,7 +61,7 @@
     "breed": "chinese crested",
     "trait": "loves new friends",
     "owner": "Brad Pott",
-    "picture": "../assets/picture/Larry.jpg"
+    "picture": "./assets/pictures/Larry.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f15",
@@ -72,6 +70,6 @@
     "breed": "pug",
     "trait": "loves new friends",
     "owner": "Darth Vader",
-    "picture": "../assets/picture/Sithy.jpg"
+    "picture": "./assets/pictures/Sithy.jpg"
   }
 ]

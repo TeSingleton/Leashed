@@ -40,7 +40,7 @@ const Gallery = () => {
                           component="img"
                           height="140"
                           image={picture}
-                          alt="picutre of dog"
+                          alt="picture of dog"
                         />
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
