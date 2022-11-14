@@ -3,7 +3,7 @@
   {
     "_id": "636c85b59511865931fd3052",
     "name": "Pumpkin",
-    "bio": "Loves long walks on the beach",
+    "bio": "Loves long walks on the beach and sunsets. Catch me outside.",
     "breed": "chihuahua",
     "trait": "sassy",
     "owner": "Brian Chuckles",
@@ -12,7 +12,7 @@
   {
     "_id": "636f33b0a0df4ee6edd83f0f",
     "name": "Ghost",
-    "bio": "An albino direwolf who is new to Seattle",
+    "bio": "An albino direwolf who is new to Seattle. Famous for his role in game of thrones.",
     "breed": "direwolf",
     "trait": "protective at first",
     "owner": "Jon Snow",
@@ -21,7 +21,7 @@
   {
     "_id": "636f33b0a0df4ee6edd83f10",
     "name": "Bruiser",
-    "bio": "Star of Legally Blonde, and Legally Blonde 2",
+    "bio": "Star of Legally Blonde, and Legally Blonde 2. A real diva.",
     "breed": "chihuahua",
     "trait": "in charge",
     "owner": "Elle Woods",
@@ -30,7 +30,7 @@
   {
     "_id": "636f33b0a0df4ee6edd83f11",
     "name": "Hershey",
-    "bio": "Stay hungry",
+    "bio": "Stay hungry is my motto. Don't leave food laying around, you might not get it back.",
     "breed": "lab",
     "trait": "eats everything",
     "owner": "Macy Bacy",
@@ -39,16 +39,16 @@
   {
     "_id": "636f33b0a0df4ee6edd83f12",
     "name": "Bark Twain",
-    "bio": "Surprisingly fast and will out-fetch you!",
+    "bio": "Surprisingly fast and will out-fetch you! Catch me if you can!",
     "breed": "corgi",
     "trait": "loves new friends",
     "owner": "Chester Fester",
-    "picture": "../assets/picutres/Bark-Twain.jpg"
+    "picture": "../assets/pictures/Bark-Twain.jpg"
   },
   {
     "_id": "636f33b0a0df4ee6edd83f13",
     "name": "Puff",
-    "bio": "Small but mighty",
+    "bio": "Small but mighty. Not your average dog might be too stylish for you.",
     "breed": "pomeranian",
     "trait": "sweet",
     "owner": "Jennifer Hanniston",
@@ -57,7 +57,7 @@
   {
     "_id": "636f33b0a0df4ee6edd83f14",
     "name": "Larry",
-    "bio": "Will steal your human",
+    "bio": "Will steal your human and your toys. Loves a good bone.",
     "breed": "chinese crested",
     "trait": "loves new friends",
     "owner": "Brad Pott",
@@ -66,7 +66,7 @@
   {
     "_id": "636f33b0a0df4ee6edd83f15",
     "name": "Sithy",
-    "bio": "Loves belly scratches in the park",
+    "bio": "Loves belly scratches in the park, especially in the summer when it's not raining.",
     "breed": "pug",
     "trait": "loves new friends",
     "owner": "Darth Vader",

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import Container from '@mui/material/Container';
 
 import { QUERY_ME } from '../utils/queries';
 
@@ -24,15 +25,43 @@ const Profile = () => {
     );
   }
 
-  console.log(user);
+ 
 
   return (
     <div>
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {user.username}' profile.
+      <div id="profileWords">
+        <h1 className="">
+          Hello {user.username}!
+        </h1>
+
+        <div className="col-12 col-md-10 mb-5">
+      
+          
+        </div>
+
+        <h2>
+                  Your Pets:
         </h2>
       </div>
+
+      {user.pets.map((pet) => (
+              <div key={pet._id} className="my-2">
+               
+                <Container id="petContainer2" maxWidth="sm">
+    
+    <h3>{pet.name}</h3>
+        <img id="petImage"
+          src={pet.picture}
+          alt={pet.name}
+        />
+        <p>{pet.breed}</p>
+        <p>{pet.trait}</p>
+        <p>{pet.bio}</p>
+        <p>{pet.owner}</p>
+
+        </Container>
+              </div>
+            ))}
     </div>
   );
 };
