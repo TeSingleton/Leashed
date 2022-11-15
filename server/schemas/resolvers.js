@@ -1,13 +1,35 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Pet} = require('../models');
+const { AuthenticationError, UserInputError } = require('apollo-server-express');
+const { User, Pet, Message} = require('../models');
 
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    // users: async () => {
-    //   return User.find().select("-password");
+    // users: async (_, _, {user}) => {
+    //   if (!context.user) {
+    //     throw new AuthenticationError('You need to be logged in!');
+    //   }
+    //   let users= await User.findAll({
+    //     where: {username: {[Op.ne]: user.username},}
+    //   })
+
+    //   // const allUserMessages = await Message.findAll({
+    //   //   where: {
+    //   //     [Op.or]: [{ from: user.username}, { to: user.username }]
+    //   //   },
+    //   //   order: [['createdAt', 'DESC']]
+    //   // })
+    //   // users = users.map(otherUser => {
+    //   //   const latestMessage = allUserMessages.find(
+    //   //     (m) => m.from === otherUser.username || m.to === otherUser.username
+    //   //   )
+    //   //   otherUser.latestMessage = latestMessage
+    //   //   return otherUser
+    //   // })
     // },
+   
+   
+  
     user: async (parent, { username }) => {
       if (!context.user) {
         throw new AuthenticationError('You need to be logged in!');
@@ -21,6 +43,7 @@ const resolvers = {
 
       return await User.findOne({ _id: context.user._id })
               .populate('pets')
+              .populate('message')
               .select("-password")
     },
     pets: async () => {
@@ -37,6 +60,13 @@ const resolvers = {
 
     pet: async (parent, { petId }) => {
       return Pet.findOne({ _id: petId });
+    },
+
+    messages: async () => {
+      return Message.find().sort({creadetAt: -1});
+    },
+    message: async (parent, { messageId }) => {
+      return Message.findOne({ _id: messageId });
     },
   },
 
@@ -74,6 +104,32 @@ const resolvers = {
 
       return pet;
     },
+    sendMessage: async (parent, { messageText, messageAuthor }) => {
+      return Message.create({ messageText, messageAuthor });
+    },
+    sendComment: async (parent, { messageId, commentText, commentAuthor}) => {
+      return Message.findOneAndUpdate(
+        { _id: messageId },
+        {
+          $addToSet: { comments: { commentText, commentAuthor } },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+    removeMessage: async (parent, { messageId }) => {
+      return Message.findOneAndDelete({ _id: messageId });
+    },
+    removeComment: async (parent, { messageId, commentId }) => {
+      return Message.findOneAndUpdate(
+        { _id: messageId },
+        { $pull: { comments: { _id: commentId } } },
+        { new: true }
+      );
+    },
+      
   },
 };
 

@@ -10,9 +10,6 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 
 
 
-
-// import { QUERY_THOUGHTS } from '../utils/queries';
-
 const Gallery = () => {
   const { loading, data } = useQuery(QUERY_PETS);
 
@@ -50,7 +47,7 @@ const Gallery = () => {
                         </CardContent>
                       </CardActionArea>
                       <CardActions>
-                         <Button size="small" color="primary">
+                         <Button size="small" color="primary" href="/messaging">
                               Message
                           </Button>
                       </CardActions>
@@ -61,10 +58,7 @@ const Gallery = () => {
               </Grid2>
            
               )}
-              <h2>Ready to create a new matchup?</h2>
-              {/* <Link to="/matchup">
-                <button className="btn btn-lg btn-danger">Create Matchup!</button>
-              </Link> */}
+            
     </main>
   );
 };

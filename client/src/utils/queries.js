@@ -55,3 +55,31 @@ query getPet($petId: ID!) {
   }
 }
 `;
+
+export const QUERY_MESSAGES = gql`
+query messages {
+    messages {
+      _id
+      messageText
+      messageAuthor
+      createdAt
+      }
+    }
+  `;
+
+export const QUERY_SINGLE_MESSAGE = gql`
+  query getSingleMessage($messageId: ID!) {
+    message(messageId: $messageId) {
+      _id
+      messageText
+      messageAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;

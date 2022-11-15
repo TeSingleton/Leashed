@@ -4,42 +4,48 @@
     "username": "Brian Chuckles",
     "email": "bkernighan@iheartdogs.dev",
     "password": "password",
-    "pets": ["636c85b59511865931fd3052"]
+    "pets": ["636c85b59511865931fd3052"],
+    "message":["63723148d61a09306ae57166", "63723148d61a09306ae5716a"]
   },
   {
     "_id": "636f34827f56ce5668ed362b",
     "username": "Macy Bacy",
     "email": "dogluvr@aol.com",
     "password": "password",
-    "pets": ["636f33b0a0df4ee6edd83f11"]
+    "pets": ["636f33b0a0df4ee6edd83f11"],
+    "message":["63723148d61a09306ae57169"]
   },
   {
     "_id": "636f34827f56ce5668ed362c",
     "username": "Chester Fester",
     "email": "ineedhelp@aol.com",
     "password": "password",
-    "pets": ["636f33b0a0df4ee6edd83f12"]
+    "pets": ["636f33b0a0df4ee6edd83f12"],
+    "message":["63723148d61a09306ae57167"]
   },
   {
     "_id": "636f34827f56ce5668ed362d",
     "username": "Jennifer Hanniston",
     "email": "jenny@hotmail.com",
     "password": "password",
-    "pets": ["636f33b0a0df4ee6edd83f13"]
+    "pets": ["636f33b0a0df4ee6edd83f13"],
+    "message":[]
   },
   {
     "_id": "636f34827f56ce5668ed362e",
     "username": "Brad Pott",
     "email": "brad@gmail.com",
     "password": "password",
-    "pets": ["636f33b0a0df4ee6edd83f14"]
+    "pets": ["636f33b0a0df4ee6edd83f14"],
+    "message":["63723148d61a09306ae5716b"]
   },
   {
     "_id": "636f34827f56ce5668ed362f",
     "username": "Elle Woods",
     "email": "harvardlawgal@hotmail.com",
     "password": "password",
-    "pets": ["636f33b0a0df4ee6edd83f10"]
+    "pets": ["636f33b0a0df4ee6edd83f10"],
+    "message":["63723148d61a09306ae5716c"]
 
   },
   {
@@ -47,13 +53,15 @@
     "username": "Darth Vader",
     "email": "darth@hotmail.com",
     "password": "password",
-    "pets": ["636f33b0a0df4ee6edd83f15"]
+    "pets": ["636f33b0a0df4ee6edd83f15"],
+    "message":["63723148d61a09306ae5716a"]
   },
   {
     "_id": "636f34827f56ce5668ed3631",
     "username": "Jon Snow",
     "email": "kingofthenorth@gmail.com",
     "password": "password",
-    "pets": ["636f33b0a0df4ee6edd83f0f"]
+    "pets": ["636f33b0a0df4ee6edd83f0f"],
+    "message":[]
   }
 ]

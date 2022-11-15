@@ -60,3 +60,16 @@ body{
 #profileWords{
     text-align: center;
 }
+
+#message{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#commentForm{
+    display: flex;
+    justify-content: center;
+}
+

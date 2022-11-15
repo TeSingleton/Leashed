@@ -1,0 +1,33 @@
+[
+    {   
+        "_id": "63723148d61a09306ae57166",
+        "messageText": "Who wants to meet up a the dog park on Cherry Street?",
+        "messageAuthor": "Brian Chuckles"
+    },
+    {
+        "_id": "63723148d61a09306ae57169",
+        "messageText": "Does anyone want to go to the breweries in Ballard, I heard they're dog friendly?",
+        "messageAuthor": "Macy Bacy"
+    },
+    {
+        "_id": "63723148d61a09306ae5716a",
+        "messageText": "I'm going to Manason park this Saturday. They have a great dog park if anyone would like to come?",
+        "messageAuthor": "Darth Vader"
+    },
+    {
+        "_id": "63723148d61a09306ae57167",
+        "messageText": "I'm looking for other dogs that like cheetos as much as chester. Are there any out there?",
+        "messageAuthor": "Chester Fester"
+    },
+    {
+        "_id": "63723148d61a09306ae57168",
+        "messageText": "Would anyone like to join Puff and I for a hike in the cascades this weekend?",
+        "messageAuthor": "Jennifer Hanniston"
+    },
+    {
+        "_id": "63723148d61a09306ae5716b",
+        "messageText": "My dog has been helping me with coding recently. I didn't know dogs could do that. Comment if you're dog is human like as well?",
+        "messageAuthor": "Brad Pott"
+    }
+]
+ 
