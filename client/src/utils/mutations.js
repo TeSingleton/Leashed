@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PET = gql`
-  mutation addPet($name: String!, $bio: String!, $breed: String!, $trait: String!, $picture: String!, $owner: String!) {
-    addPet(name: $name, bio: $bio, breed: $breed, trait: $trait, picture: $picture, owner: $owner) {
+  mutation addPet($name: String!, $bio: String!, $breed: String!, $traits: String!, $picture: String!) {
+    addPet(name: $name, bio: $bio, breed: $breed, traits: $traits, picture: $picture) {
       token
       user {
         _id
