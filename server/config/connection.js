@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  'mongodb://127.0.0.1:27017/leashed_DB' ||  process.env.MONGODB_URI,
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/leashed_DB',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
