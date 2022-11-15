@@ -6,7 +6,9 @@ const typeDefs = gql`
     username: String
     email: String
     pets: [Pet]
+    message: [Message]
   }
+
   
   type Pet {
     _id: ID
@@ -18,21 +20,20 @@ const typeDefs = gql`
     owner: String
   }
 
-  type Timeline {
-    _id: ID,
-    name: String
-    description: String
-    startDate: String
-    endDate: String
-    isPresent: Boolean
+
+  type Message {
+    _id: ID
+    messageText: String
+    messageAuthor: String
+    createdAt: String!
+    comments: [Comment]!
   }
 
-  input TimelineInput {
-    name: String!
-    description: String
-    startDate: String!
-    endDate: String
-    isPresent: Boolean
+  type Comment {
+    _id: ID
+    commentText: String
+    commentAuthor: String
+    createdAt: String
   }
 
   type Auth {
@@ -45,13 +46,18 @@ const typeDefs = gql`
     me: User
     pets: [Pet]
     pet(petId: ID!): Pet
+    messages: [Message]!
+    message(messageId: ID): Message
   }
 
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     addPet(username: String!, email: String!, password: String!, name: String!, breed: String!, traits: String!, bio: String!, picture: String!): Pet
     login(email: String!, password: String!): Auth
-    addTimeline(entry: TimelineInput): Timeline
+    sendMessage(messageText: String!, messageAuthor: String!): Message
+    sendComment(messageId: ID!, commentText: String!, commentAuthor: String!): Message
+    removeMessage(messageId: ID!): Message
+    removeComment(messageId: ID!, commentId: ID!): Message
   }
 `;
 

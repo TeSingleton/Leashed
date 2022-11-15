@@ -35,3 +35,36 @@ export const ADD_PET = gql`
     }
   }
 `;
+
+export const SEND_MESSAGE = gql`
+  mutation sendMessage($messageText: String!, $messageAuthor: String!) {
+    sendMessage(messageText: $messageText, messageAuthor: $messageAuthor) {
+      _id
+      messageText
+      messageAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+      }
+    }
+  }
+`;
+
+export const SEND_COMMENT= gql`
+  mutation sendComment($messageId: ID!, $commentText: String!, $commentAuthor: String!) {
+    sendComment(messageId: $messageId, commentText: $commentText, commentAuthor: $commentAuthor) {
+      _id
+      messageText
+      messageAuthor
+      createdAt
+      comments {
+        _id
+        commentText
+        commentAuthor
+        createdAt
+      }
+    }
+  }
+`;

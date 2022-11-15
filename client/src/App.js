@@ -19,6 +19,8 @@ import Footer from './components/Footer';
 import Gallery from './pages/Gallery';
 import Pet from './pages/Pet'
 import PetSignup from './pages/PetSignup';
+import Messaging from './pages/Messaging';
+import Messages from './pages/Messages';
 
 
 // todo add axios import here (axios dependancy has been installed)
@@ -99,6 +101,14 @@ function App() {
               <Route 
                 path="/pets/:petId"
                 element={<Pet />}
+              />
+              <Route 
+                path="/messaging"
+                element={<Messaging />}
+              />
+              <Route 
+                path="/messages/:messageId"
+                element={<Messages />}
               />
             </Routes>
           </div>

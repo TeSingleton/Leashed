@@ -30,7 +30,7 @@ export default function Footer() {
         >
           <BottomNavigationAction  icon={<AccountCircleIcon  fontSize="large"/>} href="/me"/>
           <BottomNavigationAction  icon={<PetsIcon  fontSize="large"/>} href="/gallery"/>
-          <BottomNavigationAction icon={<MailOutlineIcon fontSize="large"/>} href="/messages"/>
+          <BottomNavigationAction icon={<MailOutlineIcon fontSize="large"/>} href="/messaging"/>
         </BottomNavigation>
         </>
       ) : (

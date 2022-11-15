@@ -1,5 +1,5 @@
 const User = require('./User');
-const Timeline = require('./Timeline');
+const Message = require('./Message');
 const Pet = require('./Pet');
 
-module.exports = { User, Timeline, Pet };
+module.exports = { User, Message, Pet };
